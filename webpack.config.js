@@ -1,5 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+
 const path = require("path");
 
 const mode = process.env.NODE_ENV || "development";
@@ -29,17 +31,25 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "src", "index.html"),
+      template: path.resolve(__dirname, "src", "index.hbs"),
     }),
     new MiniCssExtractPlugin({
       filename: "[name].[contenthash].css",
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "src", "assets", "img"),
+          to: "./assets/img",
+        },
+      ],
     }),
   ],
   module: {
     rules: [
       {
-        test: /\.html$/i,
-        loader: "html-loader",
+        test: /\.hbs$/,
+        loader: "handlebars-loader",
       },
       {
         test: /\.(sa|sc|c)ss$/,
@@ -75,6 +85,7 @@ module.exports = {
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
+          "file-loader",
           {
             loader: "image-webpack-loader",
             options: {
@@ -98,8 +109,8 @@ module.exports = {
               },
             },
           },
-        ],
-        type: "asset/resource",
+        ],/* 
+        type: "asset/resource", */
       },
     ],
   },
