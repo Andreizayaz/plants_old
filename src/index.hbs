@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Plants</title>
+  <link rel="shortcut icon" href="assets/img/favicon_io/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  {{> ./partials/_header.hbs}}
-    <div>it's div</div>
-    <img src="assets/img/01_nature.jpg" alt="">
-    <h1>hello nice world</h1>
-    {{> ./partials/_footer.hbs}}
+  {{>./partials/layout/_header.hbs}}
+  <main>
+    {{>./partials/layout/_welcome.hbs}}
+  </main>
 </body>
 </html>

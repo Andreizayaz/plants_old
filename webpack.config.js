@@ -17,7 +17,6 @@ module.exports = {
     compress: true,
     open: true,
     port: 3000,
-    hot: true,
     static: {
       directory: path.join(__dirname, "public"),
     },
@@ -70,6 +69,7 @@ module.exports = {
       {
         test: /\.tsx?$/,
         use: "ts-loader",
+        include: path.resolve(__dirname, "src", "ts"),
         exclude: /node_modules/,
       },
       {
@@ -85,7 +85,8 @@ module.exports = {
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
-          "file-loader",
+          /* 
+          "file-loader", */
           {
             loader: "image-webpack-loader",
             options: {
@@ -109,12 +110,19 @@ module.exports = {
               },
             },
           },
-        ],/* 
-        type: "asset/resource", */
+        ],
+        type: "asset/resource",
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "fonts/[name][ext]",
+        },
       },
     ],
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: [".ts", ".js"],
   },
 };

@@ -1,0 +1,27 @@
+@mixin column-gap($gap) {
+  column-gap: $gap;
+}
+
+@mixin row-gap($gap) {
+  row-gap: $gap;
+}
+
+@mixin padding($vert, $hor) {
+  padding: $vert $hor;
+}
+
+@mixin border($width, $color, $style: "solid", $radius: unset) {
+  border: #{$width}px $style $color;
+  border-radius: $radius;
+}
+
+@mixin bgImage($url, $bgz: contain, $bgr: no-repeat) {
+  background-image: url($url);
+  background-repeat: $bgr;
+  background-size: $bgz;
+}
+
+@mixin heightWidthPx($height, $width) {
+  height: #{$height}px;
+  width: #{$width}px;
+}

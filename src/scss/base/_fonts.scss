@@ -1,0 +1,35 @@
+@font-face {
+  font-family: Inika;
+  src: url("../assets/fonts/Inika/inika_woff2/Inika-Bold.woff2") format('woff2'),
+    url("../assets/fonts/Inika/inika_woff/Inika-Bold.woff") format('woff'),
+    url("../assets/fonts/Inika/inika_ttf/Inika-Bold.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Inika;
+  src: url("../assets/fonts/Inika/inika_woff2/Inika-Regular.woff2") format('woff2'),
+    url("../assets/fonts/Inika/inika_woff/Inika-Regular.woff") format('woff'),
+    url("../assets/fonts/Inika/inika_ttf/Inika-Regular.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url("../assets/fonts/Inter/inter_woff2/Inter-Bold.woff2") format('woff2'),
+    url("../assets/fonts/Inter/inter_woff/Inter-Bold.woff") format('woff'),
+    url("../assets/fonts/Inika/inika_ttf/Inika-Bold.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url("../assets/fonts/Inter/inter_woff2/Inter-Regular.woff2") format('woff2'),
+    url("../assets/fonts/Inter/inter_woff/Inter-Regular.woff") format('woff'),
+    url("../assets/fonts/Inika/inika_ttf/Inika-Regular.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}

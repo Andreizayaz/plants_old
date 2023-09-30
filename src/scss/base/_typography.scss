@@ -1,0 +1,78 @@
+body {
+  font-family: $inter, sans-serif;
+  font-weight: $regular-fw;
+}
+
+.nav-link {
+  color: $nav-link-color;
+  font-family: $inika;
+  font-size: $nav-link-fz;
+  line-height: $nav-link-lh;
+
+  &_active {
+    color: $nav-link-active-color;
+  }
+}
+
+.main_heading {
+  color: $heading-secondary-color;
+  font-size: $heading-secondary-fz;
+  font-weight: $bold-fw;
+  line-height: $heading-secondary-lh;
+}
+
+.section_heading {
+  color: $heading-primary-color;
+  font-size: $heading-primary-fz;
+  font-weight: $regular-fw;
+  line-height: $heading-primary-lh;
+
+  &_price {
+    color: $black;
+    font-weight: $bold-fw;
+    line-height: $heading-secondary-lh;
+  }
+}
+
+.green-text {
+  color: $green;
+}
+
+.orange-text {
+  color: $orange;
+}
+
+.text {
+  color: $text-color;
+  font-size: $text-fz;
+  line-height: $text-lh;
+}
+
+.link-btn {
+  color: $btn-link-color;
+  font-family: $inter;
+  font-size: $btn-link-fz;
+  line-height: $btn-link-lh;
+}
+
+.card {
+  &__heading {
+    color: $card-heading-color;
+    font-size: $card-heading-fz;
+    font-weight: $bold-fw;
+    line-height: $card-heading-lh;
+  }
+
+  &__text {
+    color: $card-text-color;
+    font-size: $card-text-fz;
+    font-weight: $bold-fw;
+    line-height: $card-text-lh;
+  }
+}
+
+.footer {
+  color: $footer-color;
+  font-size: $footer-fz;
+  line-height: $footer-lh;
+}
